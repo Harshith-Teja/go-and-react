@@ -2,6 +2,33 @@ package main
 
 import (
 	"fmt"
+
+	"go.mongodb.org/mongo-driver/mongo"
+)
+
+type Todo struct {
+	ID int `json: "_id" bson: "_id"`
+	Completed bool `json: "completed"`
+	Body string `json: "body"`
+}
+
+var collection *mongo.Collection
+
+func main() {
+	fmt.Println("hello world!")
+}
+
+
+
+
+
+
+
+/*
+package main
+
+import (
+	"fmt"
 	"log"
 	"os"
 
@@ -86,3 +113,5 @@ func main() {
 
 	log.Fatal(app.Listen(":" + PORT))	
 }
+
+*/
