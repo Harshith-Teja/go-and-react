@@ -54,8 +54,8 @@ func main() {
 
 	app.Get("/api/todos", getTodos)
 	app.Post("/api/todos", createTodo)
-	app.Patch("/api/todos", updateTodo)
-	app.Delete("/api/todos", deleteTodo)
+	app.Patch("/api/todos/:id", updateTodo)
+	app.Delete("/api/todos/:id", deleteTodo)
 
 	PORT := os.Getenv("PORT")
 
